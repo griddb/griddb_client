@@ -1,8 +1,6 @@
-/*------------------------------------------------------------------*/
-// Copyright (c) 2012 Toshiba Solutions Corporation. All Rights Reserved.
-/*------------------------------------------------------------------*/
-
-
+﻿/*
+	Copyright (c) 2012 TOSHIBA CORPORATION.
+*/
 #ifndef GRIDSTORE_H_
 #define GRIDSTORE_H_
 
@@ -25,7 +23,6 @@
 
 #define GS_CLIENT_VERSION_MINOR 1
 #endif
-
 
 #ifdef __cplusplus
 extern "C" {
@@ -78,22 +75,17 @@ extern "C" {
 
 #if GS_DEPRECATED_FUNC_ENABLED
 
-
 #ifndef GS_COMPATIBILITY_FACTORY_BETA_0_3
 #define GS_COMPATIBILITY_FACTORY_BETA_0_3 0
 #endif
-
-
 
 #ifndef GS_COMPATIBILITY_TIME_SETIES_PROPERTIES_0_0_10
 #define GS_COMPATIBILITY_TIME_SETIES_PROPERTIES_0_0_10 0
 #endif
 
-
 #ifndef GS_COMPATIBILITY_TIME_SETIES_SAMPLING_BETA_0_1
 #define GS_COMPATIBILITY_TIME_SETIES_SAMPLING_BETA_0_1 0
 #endif
-
 
 #ifndef GS_COMPATIBILITY_GET_MULTIPLE_ROWS_BETA_0_3
 #define GS_COMPATIBILITY_GET_MULTIPLE_ROWS_BETA_0_3 0
@@ -1015,9 +1007,6 @@ typedef union GSValueTag {
 
 
 
-
-
-
 GS_DLL_PUBLIC void GS_API_CALL gsCloseFactory(
 		GSGridStoreFactory **factory, GSBool allRelated);
 
@@ -1067,9 +1056,6 @@ GS_DLL_PUBLIC GS_DEPRECATED_FUNC(
 		gsSetFactoryProperties(factory, properties, propertyCount)
 #endif
 #endif	
-
-
-
 
 
 
@@ -1382,9 +1368,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsCreateRowKeyPredicate(
 
 
 
-
-
-
 GS_DLL_PUBLIC void GS_API_CALL gsCloseContainer(
 		GSContainer **container, GSBool allRelated);
 
@@ -1488,9 +1471,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsCreateRowByContainer(
 
 
 
-
-
-
 GS_DLL_PUBLIC GSResult GS_API_CALL gsAbort(GSContainer *container);
 
 
@@ -1503,9 +1483,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsGetRowForUpdate(
 
 GS_DLL_PUBLIC GSResult GS_API_CALL gsSetAutoCommit(
 		GSContainer *container, GSBool enabled);
-
-
-
 
 
 
@@ -1582,9 +1559,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsDeleteRowByString(
 
 
 
-
-
-
 GS_DLL_PUBLIC GSResult GS_API_CALL gsQueryByGeometry(
 		GSCollection *collection, const GSChar *column, const GSChar *geometry,
 		GSGeometryOperator geometryOp, GSQuery **query);
@@ -1602,9 +1576,6 @@ GS_DLL_PUBLIC GS_DEPRECATED_FUNC(
 		const GSChar *geometryIntersection, const GSChar *geometryDisjoint,
 		GSQuery **query));
 #endif
-
-
-
 
 
 
@@ -1669,9 +1640,6 @@ GS_DLL_PUBLIC GS_DEPRECATED_FUNC(GSResult GS_API_CALL
 				mode, interval, intervalUnit, query)
 #endif
 #endif	
-
-
-
 
 
 #if GS_COMPATIBILITY_SUPPORT_1_5
@@ -1891,9 +1859,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsGetRowFieldAsTimestampArray(
 
 
 
-
-
-
 GS_DLL_PUBLIC void GS_API_CALL gsCloseQuery(GSQuery **query);
 
 
@@ -1912,9 +1877,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsGetRowSet(
 		GSQuery *query, GSRowSet **rowSet);
 
 #endif	
-
-
-
 
 
 
@@ -1951,9 +1913,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsUpdateCurrentRow(
 
 
 
-
-
-
 GS_DLL_PUBLIC void GS_API_CALL gsCloseAggregationResult(
 		GSAggregationResult **aggregationResult);
 
@@ -1961,9 +1920,6 @@ GS_DLL_PUBLIC void GS_API_CALL gsCloseAggregationResult(
 GS_DLL_PUBLIC GSBool GS_API_CALL gsGetAggregationValue(
 		GSAggregationResult *aggregationResult, void *value,
 		GSType valueType);
-
-
-
 
 
 #if GS_COMPATIBILITY_SUPPORT_1_5
@@ -2101,9 +2057,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsAddPredicateKeyByTimestamp(
 #endif	
 
 
-
-
-
 #if GS_COMPATIBILITY_SUPPORT_1_5
 
 
@@ -2154,9 +2107,6 @@ GS_DLL_PUBLIC GSResult GS_API_CALL gsGetPartitionIndexOfContainer(
 
 
 
-
-
-
 GS_DLL_PUBLIC GSTimestamp GS_API_CALL gsCurrentTime();
 
 
@@ -2170,9 +2120,6 @@ GS_DLL_PUBLIC size_t GS_API_CALL gsFormatTime(
 
 GS_DLL_PUBLIC GSBool GS_API_CALL gsParseTime(
 		const GSChar *str, GSTimestamp *timestamp);
-
-
-
 
 
 
@@ -2209,9 +2156,6 @@ GS_DLL_PUBLIC GS_DEPRECATED_FUNC(
 GS_DLL_PUBLIC GSBool GS_API_CALL gsIsTimeoutError(GSResult result);
 
 #endif	
-
-
-
 
 
 #if GS_EXPERIMENTAL_TOOL_ENABLED
