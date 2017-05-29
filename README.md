@@ -84,12 +84,14 @@ GridDB Server need to be started in advance.
         $ cp griddb_python_client.py _griddb_python_client.so sample/.  
         $ sample/sample1.py <GridDB notification address> <GridDB notification port>
             <GridDB cluster name> <GridDB user> <GridDB password>
+          -->Person: name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
 
     3. The command to run sample in Ruby
 
         $ cp griddb_ruby_client.so sample/.  
         $ sample/sample1.rb <GridDB notification address> <GridDB notification port>
             <GridDB cluster name> <GridDB user> <GridDB password>
+          -->Person: name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
 
 ## Function
 
