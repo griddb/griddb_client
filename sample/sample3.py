@@ -44,7 +44,7 @@ try:
 			#Get aggregation result
 			aggResult = aggRs.get_next_aggregation()
 			#Convert result to double and print out
-			print "[Timestamp={0}] Average voltage = {1}".format(timestamp, aggResult.get_double())
+			print("[Timestamp={0}] Average voltage = {1}".format(timestamp, aggResult.get_double()))
 	
 except griddb.GSException as e:
-	print e.what()
+	print(e.what())

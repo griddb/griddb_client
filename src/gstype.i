@@ -14,10 +14,23 @@
    limitations under the License.
 */
 
+#if defined(SWIGPYTHON)
+%module griddb_python_client
+%begin %{
+#define SWIG_PYTHON_2_UNICODE
+%}
+#elif defined(SWIGRUBY)
+%module griddb_ruby_client
+#endif
+
 %include <stdint.i>
 %include <std_string.i>
 %include <std_map.i>
-%include "std_vector.i"
+%include <std_except.i>
+%include <std_shared_ptr.i>
+
+%include <typemaps.i>
+%catches(griddb::GSException);
 
 enum GSContainerTypeTag {
     GS_CONTAINER_COLLECTION,
