@@ -15,11 +15,13 @@
 */
 
 #if defined(SWIGPYTHON)
+%include "gstype_python.i"
 %module griddb_python_client
 %begin %{
 #define SWIG_PYTHON_2_UNICODE
 %}
 #elif defined(SWIGRUBY)
+%include "gstype_ruby.i"
 %module griddb_ruby_client
 #endif
 

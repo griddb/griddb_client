@@ -16,13 +16,6 @@
 
 %include "gstype.i"
 
-#if defined(SWIGPYTHON)
-%include "gstype_python.i"
-%module griddb_python_client
-#elif defined(SWIGRUBY)
-%include "gstype_ruby.i"
-%module griddb_ruby_client
-#endif
 %{
 #include "gridstore.h"
 #include "GSException.h"
