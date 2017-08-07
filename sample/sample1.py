@@ -68,7 +68,7 @@ try:
 		status = rrow.get_field_as_bool(1)
 		count = rrow.get_field_as_long(2) + 1
 		lob = rrow.get_field_as_blob(3)
-		print "Person: name={0} status={1} count={2} lob=[{3}]".format(name, status, count, ', '.join(str(e) for e in lob))
+		print("Person: name={0} status={1} count={2} lob=[{3}]".format(name, status, count, ', '.join(str(e) for e in lob)))
 		
 		#Update row
 		rrow.set_field_by_long(2, count)
@@ -77,4 +77,4 @@ try:
 	#End transaction
 	col.commit()
 except griddb.GSException as e:
-	print e.what()
+	print(e.what())

@@ -47,7 +47,7 @@ try:
 		timestamp = rrow.get_field_as_timestamp(0)
 		active = rrow.get_field_as_bool(1)
 		voltage = rrow.get_field_as_double(2)
-		print "Time={0} Active={1} Voltage={2}".format(timestamp, active, voltage)
+		print("Time={0} Active={1} Voltage={2}".format(timestamp, active, voltage))
 
 except griddb.GSException as e:
-		print e.what()
+		print(e.what())

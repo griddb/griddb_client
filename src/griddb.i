@@ -16,8 +16,6 @@
 
 %include "gstype.i"
 
-%include <std_except.i>
-
 #if defined(SWIGPYTHON)
 %include "gstype_python.i"
 %module griddb_python_client
@@ -40,10 +38,6 @@
 #include "StoreFactory.h"
 #include "Timestamp.h"
 %}
-
-%include <std_shared_ptr.i>
-%include <typemaps.i>
-%catches(griddb::GSException);
 
 %shared_ptr(griddb::Resource)
 %shared_ptr(griddb::AggregationResult)
