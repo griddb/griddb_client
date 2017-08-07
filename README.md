@@ -14,7 +14,7 @@ Building of the library and execution of the sample programs have been checked i
     OS:              CentOS 6.7(x64)
     SWIG:            3.0.10
     GCC:             4.4.7
-    Python:          2.6
+    Python:          2.6, 3.6
     Ruby:            1.8, 2.4
     GridDB Server:   3.0 (CE)
     GridDB C Client: 3.0 (CE)
