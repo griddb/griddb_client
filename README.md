@@ -52,13 +52,17 @@ Execute the command on project directory.
 
 (For Python)
 
-    1. Copy griddb_python_client.py and _griddb_python_client.so to the same directory as Python execution code.
+    1. Set the PYTHONPATH variable for griddb Python module files.
+    
+    $ export PYTHONPATH=$PYTHONPATH:<installed directory path>
 
     2. Import griddb_python_client in Python.
 
 (For Ruby)
 
-    1. Copy griddb_ruby_client.so to the same directory as Ruby execution code.
+    1. Set the RUBYPATH variable for griddb Ruby module files.
+    
+    $ export RUBYPATH=$RUBYPATH:<installed directory path>
 
     2. Import griddb_ruby_client in Ruby.
 
