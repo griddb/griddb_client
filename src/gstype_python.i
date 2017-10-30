@@ -36,8 +36,7 @@
             tuple = PyList_GetItem($input,i);
             if (!PyTuple_Check(tuple)) {
                 PyErr_SetString(PyExc_ValueError,"Expected a Tuple as List element");
-                free((void *) $1);
-                return NULL;
+                SWIG_fail;
             }
             res = SWIG_AsCharPtrAndSize(PyTuple_GetItem(tuple,0), &v, &size, &alloc[i]);
             if (!SWIG_IsOK(res)) {
@@ -46,7 +45,7 @@
 
             if(!PyInt_Check(PyTuple_GetItem(tuple,1))) {
                 PyErr_SetString(PyExc_ValueError,"Expected an Integer as column type");
-                return NULL;
+                SWIG_fail;
             }
 
             $1[i].name = v;
@@ -67,7 +66,11 @@
 		%delete_array($1[i].name);
 	  }
     }
-    free((void *) $1);
+   free((void *) $1);
+  }
+  
+  if (alloc$argnum) {
+    free(alloc$argnum);
   }
 }
 
@@ -116,6 +119,10 @@
       j += 2;
     }
     free((void *) $1);
+  }
+  
+  if (alloc$argnum) {
+    free(alloc$argnum);
   }
 }
 
@@ -180,8 +187,7 @@
             $1[i].containerName = v;
             if (!PyList_Check(val)) {
                 PyErr_SetString(PyExc_ValueError,"Expected a List as Dict element");
-                free((void *) $1);
-                return NULL;
+                SWIG_fail;
             }
 
             // Get Row element from list
@@ -232,6 +238,10 @@
 	}
 
     free((void *) $1);
+  }
+  
+  if (alloc$argnum) {
+    free(alloc$argnum);
   }
 }
 
@@ -347,6 +357,10 @@
             }
         }
         free((void *) pList);
+    }
+    
+    if (alloc$argnum) {
+        free(alloc$argnum);
     }
 }
 
