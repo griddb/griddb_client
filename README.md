@@ -6,9 +6,10 @@ GridDB Client is developed using GridDB C Client and [SWIG](http://www.swig.org/
 We can use GridDB with the following language.
  - Python
  - Ruby
+
 These Clients have C-based methods already defined for each data-type.
 
-And there is also the new Python Client with improved usability. 
+And there is also the new Python Client with improved usability.  
 Please refer to [new Python Client](https://github.com/griddb/python_client).
 
 ## Operating environment
