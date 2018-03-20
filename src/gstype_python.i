@@ -29,6 +29,7 @@
     if ($2 > 0) {
         $1 = (GSColumnInfo *) malloc($2*sizeof(GSColumnInfo));
         alloc = (int*) malloc($2*sizeof(int));
+        memset($1, 0x0, $2*sizeof(GSColumnInfo));
         memset(alloc, 0x0, $2*sizeof(int));
 
         i = 0;
