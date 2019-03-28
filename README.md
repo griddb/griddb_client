@@ -2,7 +2,7 @@ GridDB Client (Python, Ruby)
 
 ## Overview
 
-This GridDB Client is [old version](README-OLD.md].
+This GridDB Client is [an old version](README-OLD.md).
 
 We recommend to new Client with improved usability.  
 Please refer to the following:
